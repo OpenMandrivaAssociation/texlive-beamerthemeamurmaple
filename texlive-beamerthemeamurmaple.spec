@@ -1,6 +1,6 @@
 Name:		texlive-beamerthemeamurmaple
 Version:	64346
-Release:	1
+Release:	2
 Summary:	A new modern beamer theme
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/beamerthemeamurmaple
