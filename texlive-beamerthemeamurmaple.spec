@@ -1,5 +1,5 @@
 Name:		texlive-beamerthemeamurmaple
-Version:	65698
+Version:	69742
 Release:	1
 Summary:	A new modern beamer theme
 Group:		Publishing
