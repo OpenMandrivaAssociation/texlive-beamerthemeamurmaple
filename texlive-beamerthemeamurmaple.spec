@@ -3,7 +3,7 @@ Version:	69742
 Release:	1
 Summary:	A new modern beamer theme
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/beamerthemeamurmaple
+URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/beamerthemeamurmaple
 License:	lppl1.3
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/beamerthemeamurmaple.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/beamerthemeamurmaple.doc.r%{version}.tar.xz
