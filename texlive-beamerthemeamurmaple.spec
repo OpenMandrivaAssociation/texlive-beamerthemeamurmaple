@@ -1,39 +1,25 @@
-Name:		texlive-beamerthemeamurmaple
-Version:	69742
-Release:	1
+%global tl_name beamerthemeamurmaple
+%global tl_revision 79618
+
+Name:		texlive-%{tl_name}
+Epoch:		1
+Version:	1.3
+Release:	%{tl_revision}.1
 Summary:	A new modern beamer theme
 Group:		Publishing
-URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/beamerthemeamurmaple
+URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/beamer-contrib/themes/beamerthemeamurmaple
 License:	lppl1.3
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/beamerthemeamurmaple.r%{version}.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/beamerthemeamurmaple.doc.r%{version}.tar.xz
+Source0:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/beamerthemeamurmaple.r%{tl_revision}.tar.xz
+Source1:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/beamerthemeamurmaple.doc.r%{tl_revision}.tar.xz
 BuildArch:	noarch
-BuildRequires:	make
+BuildSystem:	texlive
 BuildRequires:	texlive-tlpkg
-Requires(pre):	texlive-tlpkg
-Requires(post):	texlive-kpathsea
+%texlive_base_requires
+Provides:	texlive(%{tl_name}) = %{tl_revision}
 
 %description
-This Beamer theme is a suitable theme for my use of Beamer in
-applied mathematics research. It meets my needs in my work.
-However, if you like this theme, and if you want to ask for or
-make improvements, don't hesitate to write to me!
+This Beamer theme is a suitable theme for my use of Beamer in applied
+mathematics research. It meets my needs in my work. However, if you like
+this theme, and if you want to ask for or make improvements, don't
+hesitate to write to me!
 
-%prep
-%autosetup -p1 -c -a1
-
-%build
-
-%install
-rm -rf tlpkg
-mkdir -p %{buildroot}%{_texmfdistdir}
-cp -a * %{buildroot}%{_texmfdistdir}
-
-%files
-%{_texmfdistdir}/tex/latex/beamerthemeamurmaple
-%doc %{_texmfdistdir}/doc/latex/beamerthemeamurmaple
-
-%post -p %{_sbindir}/texlive.post
-
-%postun
-[ "$1" -eq 0 ] && %{_sbindir}/texlive.post
